@@ -31,9 +31,8 @@ function startGame() {
       messageEl.style.color = "red";
     }
     renderGame();
-    if (money < betAmount) {
-      renderBroke();
-    }
+  }if (money < betAmount) {
+    renderBroke();
   }
 }
 
@@ -89,7 +88,7 @@ function renderGame() {
 
 function renderBroke() {
   if (money === 0 && isReset == true) {
-    message = "You broke!";
+    message = "You broke! Don't ever gamble again, okay? ";
   }
   messageEl.textContent = message;
 }
