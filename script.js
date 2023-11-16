@@ -45,9 +45,8 @@ function reset() {
   isAlive = false;
   isReset = true;
   money = Math.max(0, money);
-
   // Kembalikan nilai properti ke normal untuk memicu efek transisi
-  messageEl.style.color = "white"; // Kembalikan warna teks ke normal
+  messageEl.style.color = "goldenrod"; // Kembalikan warna teks ke normal
   messageEl.style.textShadow = "3px 3px 10px rgba(0, 0, 0, 0.8)"; // Kembalikan bayangan teks ke normal
 
   renderGame();
@@ -65,7 +64,7 @@ function getRandomCard() {
 }
 
 function renderGame() {
-  cardsEl.textContent = "Cards: ";
+  cardsEl.textContent = "Cards : ";
   for (let i = 0; i < cards.length; i++) {
     cardsEl.textContent += cards[i] + " ";
   }
@@ -84,8 +83,8 @@ function renderGame() {
   }
 
   messageEl.textContent = message;
-  sumEl.textContent = "Sum: " + sum;
-  moneyEl.textContent = "Chips: $" + money;
+  sumEl.textContent = "Sum : " + sum;
+  moneyEl.textContent = "Chips : $" + money;
 }
 
 function renderBroke() {

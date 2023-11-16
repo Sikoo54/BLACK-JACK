@@ -24,7 +24,7 @@ body {
   background-image: url(images/2304.w032.n002.943A.p30.943.jpg);
   background-size: cover;
   font-weight: lighter;
-  color: white;
+  color: rgb(255, 255, 255);
   letter-spacing: 1px;
   height: 100vh;
   overflow: hidden;
@@ -32,24 +32,24 @@ body {
 
 h1 {
   color: rgb(216, 161, 23);
-  margin-bottom: 110px;
+  margin-bottom: 100px;
   margin-top: 45px;
-  font-size: 70px;
+  font-size: 40px;
   text-shadow: 4px 4px 5px rgb(0, 0, 0);
 }
 
 button {
-  width: 150px;
+  width: 120px;
   padding: 10px;
   font-weight: bold;
   background-color: rgb(216, 161, 23);
   border: solid 5px rgb(13, 105, 33);
   color: rgb(2, 100, 2);
-  font-size: 18px;
-  margin: 10px;
-  margin-top: 170px;
+  font-size: 14px;
+  margin: 0px;
+  margin-top: 130px;
   font-family: arcade;
-  height: 76px;
+  height: 50px;
 }
 
 button:hover {
@@ -71,10 +71,6 @@ button:active {
   transform: translateX(-50%);
 }
 
-#message-el {
-  font-style: italic;
-}
-
 p {
   font-size: 20px;
   font-family: panton;
@@ -82,8 +78,10 @@ p {
 }
 
 #message-el {
-  font-size: 30px;
+  font-size: 25px;
   font-style: normal;
+  color: goldenrod;
+  margin-bottom: 30px;
 }
 
 #bet {
@@ -99,6 +97,7 @@ p {
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,
     text-shadow 0.3s ease-in-out;
 }
-@media only screen and (max-width: 600px) {
-  /* Gaya CSS untuk layar kecil di sini */
+
+.cont {
+  margin-top: 100px;
 }
