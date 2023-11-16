@@ -1,0 +1,19 @@
+#welcome{
+    text-align: center;
+    margin-left: 0px;
+  }
+  .howto{
+    text-align: left;
+    margin-left: 690px;
+    font-size: 1px;
+  }
+  @media screen and (max-width: 600px) {
+    /* Gaya CSS khusus untuk layar dengan lebar maksimum 600px (perangkat seluler) */
+    .howto {
+      margin-left: 0;
+    }
+  }
+
+  p{
+    font-size: 1px;
+  }
