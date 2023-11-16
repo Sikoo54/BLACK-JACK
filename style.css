@@ -99,3 +99,6 @@ p {
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,
     text-shadow 0.3s ease-in-out;
 }
+@media only screen and (max-width: 600px) {
+  /* Gaya CSS untuk layar kecil di sini */
+}
