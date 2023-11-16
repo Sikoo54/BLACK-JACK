@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Jack by Sacha</title>
+  </head>
+  <body>
+    <h1>Black Jack</h1>
+    <p id="message-el">want to Start the Game ?</p>
+    <div class="cont">
+      <p class="stats" id="cards-el">Cards:</p>
+      <p class="stats" id="sum-el">Sum:</p>
+      <p class="stats" id="money-el">Chips:</p>
+    </div>
+
+    <p id="bet">Bet: $10</p>
+
+    <button onclick="drawCard()">DRAW</button>
+    <button id="gameButton" onclick="startGame()">START</button>
+
+    <button onclick="reset()">RETRY</button>
+    <br />
+    <button id="resetbtn" onclick="window.location.reload()">RESET</button>
+
+    <p id="credits">
+      Created by <br />
+      Sacha Ahsan Firmansyah
+    </p>
+    <audio id="startSound" src="sound effect/coin_c_02-102844.mp3"></audio>
+    <audio id="bustSound" src="sound effect/hurt_c_08-102842.mp3"></audio>
+    <audio id="winSound" src="sound effect/game-bonus-144751.mp3"></audio>
+    <audio id="drawSound" src="sound effect/flipcard-91468.mp3"></audio>
+    <audio id="cashSound" src="sound effect/money-pickup-2-89563.mp3"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
