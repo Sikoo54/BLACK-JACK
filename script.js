@@ -10,6 +10,17 @@ let money = 100;
 let betAmount = 10;
 let moneyEl = document.querySelector("#money-el");
 let isReset = true;
+let gameButton = document.getElementById("gameButton");
+let betP = document.getElementById("betP")
+function toggleButton() {
+  if (isReset === true) {
+    startGame();
+  } else if (isReset === false && isAlive === true) {
+    drawCard();
+  } else if (isReset === false && isAlive === false){
+    reset()
+  } 
+}
 
 console.log(cards);
 
@@ -22,14 +33,20 @@ function startGame() {
     isAlive = true;
     money -= betAmount;
     isReset = false;
+    betP.style.display = "none"
     playStartSound();
     if (sum === 21) {
       playWinSound();
+      gameButton.textContent = "retry";
       messageEl.style.color = "greenyellow";
     } else if (sum > 21) {
       playBustSound();
+      gameButton.textContent = "retry";
       messageEl.style.color = "red";
-    }
+    } else {
+      gameButton.textContent = "DRAW";
+  }
+      
     renderGame();
   }if (money < betAmount) {
     renderBroke();
@@ -43,11 +60,12 @@ function reset() {
   hasBlackJack = false;
   isAlive = false;
   isReset = true;
+  betP.style.display = "block"
   money = Math.max(0, money);
   // Kembalikan nilai properti ke normal untuk memicu efek transisi
   messageEl.style.color = "goldenrod"; // Kembalikan warna teks ke normal
   messageEl.style.textShadow = "3px 3px 10px rgba(0, 0, 0, 0.8)"; // Kembalikan bayangan teks ke normal
-
+  gameButton.textContent = "start"
   renderGame();
 }
 
@@ -74,6 +92,7 @@ function renderGame() {
     message = "You've got Blackjack!";
     hasBlackJack = true;
     money += betAmount * 10;
+    isAlive = false;
   } else if (sum <= 20) {
     message = "Do you want to draw a new card?";
   } else {
@@ -116,11 +135,13 @@ function drawCard() {
     if (sum < 21) {
       playDrawSound();
     } else if (sum === 21) {
+      gameButton.textContent = "RETRY";
       playWinSound();
     } else {
       playBustSound();
+      gameButton.textContent = "RETRY";
     }
-
+    
     renderGame();
   }
 }
